@@ -1,0 +1,10 @@
+[package]
+name = "foo"
+version = "0.1.0"
+authors = ["benaryorg <binary@benary.org>"]
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+
