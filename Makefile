@@ -19,7 +19,7 @@ default: main
 
 main: $(OBJS)
 	@printf "[%6s] %s\n" "LD" "$@" 
-	@$(LD) -o $@ $^
+	@$(LD) $(LDFLAGS) -o $@ $^
 
 %.o: %.rs
 	@printf "[%6s] %s\n" "RUSTC" "$@" 
