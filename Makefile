@@ -10,7 +10,7 @@ LDFLAGS :=
 CARGO := rustup run nightly cargo
 CARGOFLAGS := --release
 
-SRCS = $(shell find . -maxdepth 1 -regextype posix-extended -regex '.+\.(c|rs)$$')
+SRCS = $(shell find . -maxdepth 1 -type f -regextype posix-extended -regex '.+\.(c|rs)$$')
 CRATES = $(shell find * -name Cargo.toml -type f -exec dirname "{}" \;)
 OBJS = $(addsuffix .o,$(basename $(SRCS)))
 OBJS += $(addsuffix .a,$(addprefix lib,$(CRATES)))
